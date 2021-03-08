@@ -132,10 +132,10 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "1-Jay's CNC"   //BluJay
+#define CUSTOM_MACHINE_NAME "6040 03-08-2021"   //BluJay
 
 // Printer's unique ID, used by some programs to differentiate between machines.
-// Choose your own or use a service like https://www.uuidgenerator.net/version4
+// Choose your own or use a service li25ke https://www.uuidgenerator.net/version4
 //#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
 
 // @section extruder
@@ -842,7 +842,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN   //BluJay
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN   //BluJay
 
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
@@ -883,7 +883,7 @@
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-//#define FIX_MOUNTED_PROBE   //BluJay
+#define FIX_MOUNTED_PROBE   //BluJay
 
 /**
  * Use the nozzle as the probe, as with a conductive
@@ -1123,8 +1123,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 400   //BluJay
-#define Y_BED_SIZE 600   //BluJay
+#define X_BED_SIZE 30   //BluJay
+#define Y_BED_SIZE 60   //BluJay
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1235,9 +1235,9 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_BILINEAR   //BluJay
 //#define AUTO_BED_LEVELING_UBL
-#define MESH_BED_LEVELING   //BluJay
+//#define MESH_BED_LEVELING   //BluJay
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable
@@ -1345,7 +1345,7 @@
 #define LCD_BED_LEVELING   //BluJay
 
 #if ENABLED(LCD_BED_LEVELING)
-  #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
+  #define MESH_EDIT_Z_STEP  0.1 // (mm) Step size while manually probing Z axis.
   #define LCD_PROBE_Z_RANGE 4     // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
   //#define MESH_EDIT_MENU        // Add a menu to edit mesh points
 #endif
